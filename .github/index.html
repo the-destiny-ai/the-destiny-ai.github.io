@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Download Destiny AI</title>
+  <meta name="description" content="Discover your ideal career path with AI that truly understands you." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b0f17;
+      --card: #121827;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --accent: #3b82f6;
+      --accent-2: #60a5fa;
+      --ring: rgba(59,130,246,.35);
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+      color: var(--text);
+      background: radial-gradient(1200px 600px at 50% -200px, rgba(96,165,250,.15), transparent 60%),
+                    linear-gradient(180deg, #0b1220 0%, #0b0f17 100%);
+      display: grid;
+      place-items: center;
+    }
+    .wrap {
+      width: 100%;
+      max-width: 860px;
+      padding: 40px 20px 80px;
+    }
+    .card {
+      background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.01));
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 24px;
+      padding: 28px;
+      box-shadow: 0 20px 60px rgba(0,0,0,.35);
+    }
+    header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .logo {
+      width: 120px; height: 120px; object-fit: contain; display: block; margin: 0 auto 10px;
+      filter: drop-shadow(0 6px 18px rgba(0,0,0,.35));
+    }
+    h1 { font-size: clamp(28px, 5vw, 40px); margin: 8px 0 10px; letter-spacing: .2px; }
+    p.lead { color: var(--muted); margin: 0 0 18px; font-size: clamp(15px, 2.5vw, 18px); }
+
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 18px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,.1);
+      background: linear-gradient(180deg, var(--accent), var(--accent-2));
+      color: white;
+      font-weight: 700;
+      text-decoration: none;
+      box-shadow: 0 10px 20px var(--ring);
+      transition: transform .08s ease, box-shadow .2s ease, filter .2s ease;
+    }
+    .cta:hover { transform: translateY(-1px); filter: brightness(1.02); box-shadow: 0 16px 36px var(--ring); }
+    .cta:active { transform: translateY(0); }
+
+    section { margin-top: 26px; }
+    h2 { font-size: 22px; margin: 16px 0 8px; }
+    p { line-height: 1.6; }
+    ul.process { list-style: none; padding: 0; margin: 10px 0 0; }
+    ul.process li { padding: 10px 0; border-bottom: 1px dashed rgba(255,255,255,.12); text-align: center; }
+    ul.process li:last-child { border-bottom: 0; }
+    .arrow { display: block; opacity: .7; margin: 6px auto; text-align: center; }
+
+    .grid { display: grid; gap: 18px; grid-template-columns: 1fr; }
+    @media (min-width: 720px) {
+      .grid { grid-template-columns: 1.1fr .9fr; align-items: start; }
+      section { margin-top: 0; }
+    }
+    footer { text-align: center; opacity: .6; font-size: 14px; margin-top: 18px; }
+    .small { font-size: 13px; color: var(--muted); text-align: center; }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="card">
+      <header>
+        <img class="logo" src="destiny_ai_logo.png" alt="Destiny AI Logo" />
+        <h1>Destiny AI</h1>
+        <p class="lead">Uncover your ideal career path. AI that knows you, to show you what's next.</p>
+        <a class="cta" href="destiny_ai.apk" download>
+          <span>Download for Android</span>
+        </a>
+      </header>
+
+      <div class="grid">
+        <section>
+          <h2>Why Destiny AI?</h2>
+          <p>Destiny AI offers a personalized career consultation by getting to know your unique skills and passions. It provides a clear, actionable blueprint for your professional future.</p>
+        </section>
+        <section>
+          <h2>Download Process</h2>
+          <ul class="process">
+            <li>Click "Download for Android" <span class="arrow">↓</span></li>
+            <li>Wait &amp; Click "Download Anyway" <span class="arrow">↓</span></li>
+            <li>APK File Begins Downloading <span class="arrow">↓</span></li>
+            <li>Open Downloads in Browser <span class="arrow">↓</span></li>
+            <li>Click "destiny_ai.apk" <span class="arrow">↓</span></li>
+            <li>Install App &amp; Discover Your Destiny!</li>
+          </ul>
+          <p class="small">Having trouble? On some browsers you might need to allow installs from unknown sources.</p>
+        </section>
+      </div>
+
+      <footer>
+        <p>© <span id="year"></span> Destiny AI</p>
+      </footer>
+    </div>
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
